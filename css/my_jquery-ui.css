@@ -1,0 +1,57 @@
+
+#content #tabs {
+	float: left;
+	border: 1px solid green;
+	width: 700px;
+	height: 250px;
+	padding: 5px;
+}
+
+#content #tabs ul {
+	list-style: none;
+	padding-left: 0px;
+	color: blue;
+}
+
+#content #tabs li {
+	float: left;
+	border: 1px solid black;
+	margin-right: 1px;
+	padding: 5px;
+	background-color: grey;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#content #tabs li:hover {
+	color: black;
+	background-color: lightgrey;
+}
+
+#content #tabs li a {
+	color: white;
+	text-decoration: none;
+}
+#content #tabs li:hover a {
+	color: black;
+}
+
+#content #tabs div {
+	float: left;
+	!border: 1px solid red;
+	background-color: lightgrey;
+	padding: 20px;
+}
+
+! tabs
+!---------------------------------------------------
+! toggle
+
+#toggle {
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+}

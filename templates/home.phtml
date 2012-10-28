@@ -1,0 +1,121 @@
+<?php
+	$this->slideshow_template = 'slideshow_basic.phtml';
+
+	$this->links = array(
+		new Link('Home', 'home', 'index.php'),
+		new Link('Show page', 'show', 'show.php'),
+		new Link('Videos page', 'videos', 'videos.php'),
+		new Link('Reviews page', 'reviews', 'reviews.php'),
+		new Link('Info page', 'info', 'info.php'),
+		new Link('Contact page', 'contact', 'contact.php'),
+	);
+	
+	$this->sublinks = array(
+		new Link('Main', 'main', '#'),
+		new Link('Testimonials', 'testimonials', '#'),
+		new Link('Awards', 'awards', '#'),
+		new Link('Clients', 'clients', '#'),
+	);
+	
+	$this->render('header.phtml');
+?>
+
+<body class="<?=$this->page_id?>">
+<div id="page-container">
+
+	<div id="header">
+			
+		<div id="logo" OnClick="document.location='index.php'">
+			<noscript><a href="index.php"></noscript>
+			<img src="resources/images/logo.png" width="1000" height="125"/>
+			<noscript></a></noscript>
+		</div>
+		
+		<!-- Navigation links -->
+		<div id="main_nav">
+			<?php foreach ($this->links as $link): ?>
+				<div class="nav_button" id="<?=$link->style_id?>" 
+					OnClick="document.location='<?=$link->link?>'"
+				><?=$link->name?></div>
+			<?php endforeach; ?>
+		</div>
+
+
+		<div id="slideshow" class="slideshow">
+			<?php foreach ($this->slides as $slide): ?>
+				<img src="<?=$slide?>" width="1000" height="300"/>
+			<?php endforeach; ?>		
+		</div> <!-- End of slideshow -->
+		
+		<div id="slideshow_overlay">
+			<iframe width="300" height="225" src="http://www.youtube.com/embed/adKlitJugeY?start=360" frameborder="0"></iframe>
+			<div id="words">
+				<p>Words you can read.</p>
+				<p style="display:none">Sdrow uoy nac daer.</p>
+			</div>
+		</div>
+		
+
+
+		
+		<div id="buttons">
+		<!-- List of homepage buttons -->
+		<?php foreach ($this->articles as $article): ?>
+			<div class="article"
+				<?php if ($article->link): ?>
+					OnClick="document.location='<?=$article->link?>'"
+				<?php endif; ?>
+			>
+			<?php if ($article->link): ?>
+				<noscript><a href="<?=$article->link?>"></noscript>
+			<?php endif; ?>
+				<?php if ($article->thumbnail): ?>
+					<img src="<?=$article->thumbnail?>" alt="Thumbnail" />
+				<?php endif; ?>
+				<h2><a>
+					<?=$article->title?>
+				</a></h2>
+				<p>
+					<?=$article->summary?>
+				</p>
+				<?php if ($article->link): ?>
+					<a>More...</a>
+					<noscript></a></noscript>
+				<?php endif; ?>
+			</div>
+		<?php endforeach; ?>
+		</div> <!-- End of New Content -->
+		
+	</div> <!-- End of header -->
+	
+	<div id="content">
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Nunc tincidunt</a></li>
+				<li><a href="#tabs-2">Proin dolor</a></li>
+				<li><a href="#tabs-3">Aenean lacinia</a></li>
+			</ul>
+			<div id="tabs-1">
+				<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+			</div>
+			<div id="tabs-2">
+				<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+			</div>
+			<div id="tabs-3">
+				<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+				<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+			</div>
+		</div>
+	</div> <!-- End of Featured Content -->
+	
+	<div id="sidebar">
+		<div id="foo">
+			<h2>Sidebar</h2>
+			<img src="resources/images/ralph_eats_glue.gif" width="160" height="120"/>
+		</div>
+	</div>
+
+	
+<?php
+	$this->render('footer.phtml');
+?>

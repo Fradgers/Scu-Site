@@ -1,0 +1,100 @@
+	<!-- include jQuery library and Cycle slideshow plugin -->
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.cycle.all.latest.js"></script>
+	
+	<style type="text/css">
+#nav {
+!float: right;
+height: 76px;
+overflow: hidden;
+}
+
+#nav li {
+width: 76px;
+margin: 5px;
+list-style: none;
+z-index: 50;
+float: left;
+}
+
+#nav a {
+position: relative;
+width: 76px;
+padding: 3px;
+display: block;
+border: 1px solid #ccc;
+background: #f2f1df;
+z-index: 50;
+}
+
+#nav li.activeSlide a {
+background: #de6619;
+}
+
+#nav a:focus {
+outline: none;
+}
+
+#nav img {
+border: none;
+display: block;
+}
+	</style>
+	
+	<!-- Cycle slideshow settings -->
+	<script type="text/javascript">
+	
+	/* Shift the thumbnail list horizontally when the slideshow transitions */
+	function shiftThumbs(currSlide, nextSlide, opts) {
+		var newSlideIdx = opts.nextSlide;
+		var thumbsToLeft = 3;
+		var numThumbs = 8;
+		var thumbsToRight = numThumbs - (thumbsToLeft - 1);
+		
+		var staticOffset = 50;
+		var offset = ""
+		
+		if (newSlideIdx <= thumbsToLeft || newSlideIdx == opts.slideCount) {
+			offset = staticOffset + "px";
+		}
+		else if (newSlideIdx > opts.slideCount - thumbsToRight) {
+			offset = staticOffset + -258 + "px";
+		}
+		else {
+			offset = staticOffset + ((newSlideIdx - thumbsToLeft) * -86) + "px"
+		}
+	
+		/* make the thumbnails scroll smoothly (easing) */
+		var moveDest = {'margin-left': offset}
+		var animStyle = {
+			duration: 2000,
+			queue: false,
+			easeIn: 'easeInCubic',
+			easeOut: 'easeOutCubic'
+		}
+
+		/* TODO: fix popping of rightmost thumbnail */
+		$('#nav').animate(moveDest, animStyle);
+	}
+	
+	$(document).ready(function() {
+		$('.slideshow').cycle({
+			fx:     'scrollHorz',
+			prev:   '#prev',
+			next:   '#next',
+			timeout: 4000,
+			speed: 2000,
+			pager: '#nav',
+			slideExpr: 'img',
+			pause: 1,
+			fastOnEvent: true,
+			
+			before: shiftThumbs,
+			   
+			// callback fn that creates a thumbnail to use as pager anchor 
+			pagerAnchorBuilder: function(idx, slide) { 
+				return '<li><a href="#"><img src="' + slide.src + '" width="76" height="55" /></a></li>'; 
+			}
+		});
+	});
+	</script>
