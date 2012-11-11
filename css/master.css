@@ -44,7 +44,7 @@ body {
 
 #header {
 	width: 1000px;
-	height: 600px;	/*height of slideshow*/
+	height: 400px;	/*height of slideshow*/
 }
 
 #logo {
@@ -60,6 +60,7 @@ body {
 	height: 300px;
 	z-index: 0;
 	float: left;
+	overflow: hidden;
 }
 
 .slideshow img {
@@ -232,7 +233,7 @@ body.videos #content {
 	background-color: #333333;
 	padding: 5px;
 	margin-left: 10px;
-	border: 1px solid lightblue;
+	!border: 1px solid lightblue;
 }
 #sidebar h2 {
 	color: lightblue;
@@ -249,7 +250,7 @@ body.videos #content {
 	font-family: Tahoma, Arial, Helvetica, Sans-serif;
 	font-size: 10px;
 	color: #f2f1df;
-	!border-top: 1px solid #f2f1df;
+	border-top: 1px solid #f2f1df;
 	padding: 13px 25px;
 	line-height: 18px;
 	!border: 1px solid #ff0000;

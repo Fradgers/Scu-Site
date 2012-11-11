@@ -9,10 +9,7 @@ $page->title = 'Site - Show page';
 $page->page_id = 'show';
 
 $page->slides = array(
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
+	'resources/images/slide1.png'
 );
 
 $lookup = new Lookup();

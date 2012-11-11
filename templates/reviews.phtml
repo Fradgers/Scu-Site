@@ -10,6 +10,14 @@
 		new Link('Contact page', 'contact', 'contact.php'),
 	);
 	
+	$this->sublinks = array(
+		new Link('Home', 'home', 'index.php'),
+		new Link('Show page', 'show', 'show.php'),
+		new Link('Videos page', 'videos', 'videos.php'),
+		new Link('Reviews page', 'reviews', 'reviews.php'),
+	);
+	
+	
 	$this->render('header.phtml');
 ?>
 
@@ -26,17 +34,17 @@
 		
 		<!-- Navigation links -->
 		<div class="navigation" id="main_nav">
-			<ul>
-				<?php foreach ($this->links as $link): ?>
-					<li id="<?=$link->style_id?>"><a href="<?=$link->link?>"><br><?=$link->name?></a></li>
-				<?php endforeach; ?>
-			</ul>
+			<?php foreach ($this->links as $link): ?>
+				<div class="nav_button" id="<?=$link->style_id?>"
+					OnClick="document.location='<?=$link->link?>'"
+				><?=$link->name?></div>
+			<?php endforeach; ?>
 		</div>
 
 
 		<div id="slideshow" class="slideshow">
 			<?php foreach ($this->slides as $slide): ?>
-				<img src="<?=$slide?>" width="800" height="300"/>
+				<img src="<?=$slide?>" width="1000" height="300"/>
 			<?php endforeach; ?>
 		</div> <!-- End of slideshow -->
 		

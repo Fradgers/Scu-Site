@@ -9,6 +9,13 @@
 		new Link('Info page', 'info', 'info.php'),
 		new Link('Contact page', 'contact', 'contact.php'),
 	);
+
+	$this->sublinks = array(
+		new Link('Home','home','index.php'),
+		new Link('Show','show','show.php'),
+		new Link('Videos','videos','videos.php'),
+		new Link('Reviews','reviews','review.php')
+	);
 	
 	$this->render('header.phtml');
 ?>
@@ -20,26 +27,25 @@
 			
 		<div id="logo" OnClick="document.location='index.php'">
 			<noscript><a href="index.php"></noscript>
-			<img src="resources/images/logo.png" width="800" height="125"/>
+			<img src="resources/images/logo.png" width="1000" height="125"/>
 			<noscript></a></noscript>
 		</div>
 		
 		<!-- Navigation links -->
 		<div class="navigation" id="main_nav">
-			<ul>
-				<?php foreach ($this->links as $link): ?>
-					<li id="<?=$link->style_id?>"><a href="<?=$link->link?>"><br><?=$link->name?></a></li>
-				<?php endforeach; ?>
-			</ul>
+     		<?php foreach ($this->links as $link): ?>
+				<div class="nav_button" id="<?=$link->style_id?>"
+					OnClick="document.location='<?=$link->link?>'"
+				><?=$link->name?></div>
+			<?php endforeach; ?>
 		</div>
-
 
 		<div id="slideshow" class="slideshow">
 			<?php foreach ($this->slides as $slide): ?>
-				<img src="<?=$slide?>" width="800" height="300"/>
+				<img src="<?=$slide?>" width="1000" height="300"/>
 			<?php endforeach; ?>
-		</div> <!-- End of slideshow -->
-		
+		</div>
+
 	</div> <!-- End of header -->
 	
 	<div id="content"> <!-- Content -->

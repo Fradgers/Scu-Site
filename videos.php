@@ -9,10 +9,7 @@ $page->title = 'Site - Videos page';
 $page->page_id = 'videos';
 
 $page->slides = array(
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
+	'resources/images/slide3.png'
 );
 
 $lookup = new Lookup();

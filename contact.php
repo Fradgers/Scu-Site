@@ -9,10 +9,7 @@ $page->title = 'Site - Contact page';
 $page->page_id = 'contact';
 
 $page->slides = array(
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
+	'resources/images/slide2.png'
 );
 
 $page->render('contact.phtml');

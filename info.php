@@ -9,10 +9,9 @@ $page->title = 'Site - Page';
 $page->page_id = 'info';
 
 $page->slides = array(
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
+	'resources/images/slide1.png',
+	'resources/images/slide2.png',
+	'resources/images/slide3.png',
 );
 
 $page->content = new Content(

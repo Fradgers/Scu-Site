@@ -9,10 +9,7 @@ $page->title = 'Site - Reviews page';
 $page->page_id = 'reviews';
 
 $page->slides = array(
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
-	'resources/images/slide.png',
+	'resources/images/slide1.png'
 );
 
 $lookup = new Lookup();
