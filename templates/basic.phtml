@@ -48,6 +48,36 @@
 			<?php endforeach; ?>
 		</div> <!-- End of slideshow -->
 		
+		<div id=slideshow_overlay>
+		<div id="buttons">
+		<!-- List of homepage buttons -->
+		<?php foreach ($this->articles as $article): ?>
+			<div class="article"
+				<?php if ($article->link): ?>
+					OnClick="document.location='<?=$article->link?>'"
+				<?php endif; ?>
+			>
+			<?php if ($article->link): ?>
+				<noscript><a href="<?=$article->link?>"></noscript>
+			<?php endif; ?>
+				<?php if ($article->thumbnail): ?>
+					<img src="<?=$article->thumbnail?>" alt="Thumbnail" />
+				<?php endif; ?>
+				<h2><a>
+					<?=$article->title?>
+				</a></h2>
+				<p>
+					<?=$article->summary?>
+				</p>
+				<?php if ($article->link): ?>
+					<a>More...</a>
+					<noscript></a></noscript>
+				<?php endif; ?>
+			</div>
+		<?php endforeach; ?>
+		</div> <!-- End of New Content -->
+		</div>
+		
 	</div> <!-- End of header -->
 	
 	<div id="content"> <!-- Content -->
