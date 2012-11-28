@@ -34,7 +34,7 @@ html {
 body {
 	font-family: Arial, Helvetica, Verdana, Sans-serif;
 	font-size: 12px;
-	background-color: black;
+	background-color: white;
 }
 
 #page-container {	/*pending removal*/
@@ -49,44 +49,57 @@ body {
 
 #logo {
 	width: 1000px;
-	height: 125px;
+	height: 150px;
 	cursor: pointer;
 }
 
+#logo img {
+  margin-top: -75px;
+  height: 300px;
+	overflow: hidden;
+}
+
 .slideshow {
-	border: 2px solid grey;
 	margin-top: 10px;
-	width: 1000px;
-	height: 300px;
+	margin-bottom: 30px;
+	width: 600px;
+	height: 500px;
 	z-index: 0;
 	float: left;
 	overflow: hidden;
 }
 
 .slideshow img {
-	padding: 0px;
-	background-color: #eee;
+	!border: 2px solid grey;
+	width: 600px;
+	height: 400px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
 }
 
 #slideshow_overlay {
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+	padding: 0px 0px 55px 0px;
 	!border: 2px dashed purple;
 	float: left;
 	position: absolute;
-	top: 170px;
+	top: 150px;
 	margin: auto;
 	width: 1004px;
-	height: 300px;
+	height: 500px;
 }
 
 #slideshow_overlay #buttons {
 	float: right;
-	background-color: black;
+	!background-color: black;
 	!border: 1px dashed green;
 }
 
 #slideshow_overlay #buttons .article {
-	float: none;
-	margin: 5px 5px 10px 10px;
+	!float: none;
+	!margin: 5px 5px 10px 10px;
 	!margin-top: 5px;
 	!margin-bottom: 5px;
 	
@@ -94,15 +107,18 @@ body {
 
 #slideshow_overlay iframe {
 	float: right;
-	margin-top: 35px;
-	margin-right: 30px;
+	margin-top: 70px;
+	margin-right: 0px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
 }
 #slideshow_overlay #words {
 	font-weight: bold;
 	float: left;
-	margin-top: 180px;
+	margin-top: 330px;
 	margin-left: 30px;
-	background-color: lightgrey;
+	background-color: lightblue;
 	opacity: 0.9;
 	padding: 20px;
 	-webkit-border-radius: 6px;
@@ -149,6 +165,7 @@ body.reviews #main_nav .nav_button#reviews {
 
 #buttons {
 	!width: 100%;
+	
 }
 #buttons h2 {
 	margin: 2px;
@@ -163,9 +180,12 @@ body.reviews #main_nav .nav_button#reviews {
 	width: 226px;
 	height: 100px;
 	cursor: pointer;
-	border: 2px solid grey;
+	border: 2px solid white;
 	margin: 20px 5px 20px 5px;
 	padding-left: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 #buttons .article:hover {
 	background-position: 0 -100px;
@@ -174,9 +194,9 @@ body.reviews #main_nav .nav_button#reviews {
 
 #buttons .article img {
 	float: right;
-	max-width: 150px;
-	max-height: 100px;
-	margin: 0;
+	margin-top: -10px;
+	max-width: 170px;
+	max-height: 170px;
 }
 
 ! buttons
@@ -245,15 +265,17 @@ body.videos #content {
 	float: left;
 	width: 266px;
 	height: 250px;
-	background-color: #333333;
+	background-color: #ff8247;
 	padding: 5px;
 	margin-left: 10px;
 	!border: 1px solid lightblue;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
 }
 #sidebar h2 {
-	color: lightblue;
+	color: #2020e0;
 	text-align: center;
-	text-decoration: underline;
 }
 #sidebar img {
 	display: block;
@@ -265,7 +287,7 @@ body.videos #content {
 	font-family: Tahoma, Arial, Helvetica, Sans-serif;
 	font-size: 10px;
 	color: #f2f1df;
-	border-top: 1px solid #f2f1df;
+	!border-top: 1px solid #f2f1df;
 	padding: 13px 25px;
 	line-height: 18px;
 	!border: 1px solid #ff0000;

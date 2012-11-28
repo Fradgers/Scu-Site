@@ -9,9 +9,12 @@ $page->title = 'Site';
 $page->page_id = 'home';
 
 $page->slides = array(
-	'resources/images/slide1.png',
-	'resources/images/slide2.png',
-	'resources/images/slide3.png',
+	'resources/images/IMG_7338-1-2.jpg',
+	'resources/images/IMG_7372.jpg',
+	'resources/images/IMG_7338-1.jpg',
+	'resources/images/IMG_7372-1-3.jpg',
+	'resources/images/IMG_7429-1-3.jpg',
+	'resources/images/IMG_7430-1-2.jpg',
 );
 
 $page->featured = new Content(

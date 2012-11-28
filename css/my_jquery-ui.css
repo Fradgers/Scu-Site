@@ -1,7 +1,7 @@
 
 #content #tabs {
 	float: left;
-	border: 1px solid green;
+	!border: 1px solid green;
 	width: 700px;
 	height: 250px;
 	padding: 5px;
