@@ -12,10 +12,10 @@ html, body, h1 {
 
 /*uncomment these for debugging div positions*/
 
-/*div { !border: 1px solid #ff00ff; }
+/*div { !border: 1px solid #ff00ff; }*/
 #header { border: 1px solid #0000ff; }
 #header div { border: 1px dashed #0000ff; }
-#content { border: 1px solid #00ff00; }
+/*#content { border: 1px solid #00ff00; }
 #content div { border: 1px dashed #00ff00; }
 #footer { border: 1px solid #ff0000; }
 #footer div { border: 1px dashed #ff0000; }
@@ -34,27 +34,28 @@ html {
 body {
 	font-family: Arial, Helvetica, Verdana, Sans-serif;
 	font-size: 12px;
-	background-color: white;
+	background-color: #dad9d8;
 }
 
 #page-container {	/*pending removal*/
-	width: 1000px;
 	margin: auto;
+	width: 1000px;
 }
 
 #header {
 	width: 1000px;
 	height: 400px;	/*height of slideshow*/
+	background-image:url('../resources/images/new/header.jpg');
 }
 
 #logo {
 	width: 1000px;
-	height: 150px;
+	height: 563px;
 	cursor: pointer;
 }
 
 #logo img {
-  margin-top: -75px;
+  margin-left: -275px;
   height: 300px;
 	overflow: hidden;
 }
@@ -62,10 +63,9 @@ body {
 .slideshow {
 	margin-top: 10px;
 	margin-bottom: 30px;
-	width: 600px;
+	width: 1000px;
 	height: 500px;
 	z-index: 0;
-	float: left;
 	overflow: hidden;
 }
 
@@ -79,15 +79,12 @@ body {
 }
 
 #slideshow_overlay {
-	border-top: 2px solid grey;
-	border-bottom: 2px solid grey;
 	padding: 0px 0px 55px 0px;
 	!border: 2px dashed purple;
 	float: left;
 	position: absolute;
 	top: 150px;
 	margin: auto;
-	width: 1004px;
 	height: 500px;
 }
 
@@ -129,17 +126,14 @@ body {
 !------------------------------------------------
 ! main_nav
 
-#main_nav {}
+#header #main_nav { background-color: black; height: 50px; }
 
 #main_nav .nav_button {
 	float: left;
-	font-weight: bold;
-	text-align: center;
-	color: white;
 	background-image: url(../resources/images/main_nav.png);
 	width: 166px;
 	height: 25px;
-	padding-top: 5px;
+	left: 500px;
 	cursor: pointer;
 }
 #main_nav .nav_button:hover {
@@ -284,6 +278,9 @@ body.videos #content {
 
 
 #footer {
+	width: 1000px;
+	height: 400px;	/*height of slideshow*/
+	background-image:url('../resources/images/new/footer.jpg');
 	font-family: Tahoma, Arial, Helvetica, Sans-serif;
 	font-size: 10px;
 	color: #f2f1df;
